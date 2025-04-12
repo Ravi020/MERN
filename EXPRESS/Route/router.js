@@ -9,5 +9,6 @@ route.get("/feedback", func.Feedback);
 route.get("/help", func.Help);
 route.get("/faqs", func.Faqs);
 route.get("/privacypolicy", func.PrivacyPolicy);
+route.post("/save",func.save_data)
 
 module.exports = route;

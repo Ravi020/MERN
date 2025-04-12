@@ -51,9 +51,11 @@ let add_data_for_hearttemp = async function(){
 }
 
 let app = exp();
+app.use(exp.json())
 
 // use routing file
 app.use("/Raviha", r);
+
 
 db().then(() => {
     app.listen(process.env.PORT, () => {
