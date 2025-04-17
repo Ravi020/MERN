@@ -4,6 +4,7 @@ let db = require("./connection");
 let User_Model = require("./Collections/User Model");
 let Personal_Record = require("./Collections/Personal Record");
 let Hearttemp = require("./Collections/Hearttemp");
+let cor = require("cors")
 require("dotenv").config();
 
 let add_data_for_user_model = async function(){
@@ -51,6 +52,10 @@ let add_data_for_hearttemp = async function(){
 }
 
 let app = exp();
+
+app.use(cor
+    ()
+);
 app.use(exp.json())
 
 // use routing file
